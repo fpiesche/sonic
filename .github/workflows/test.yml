@@ -24,7 +24,7 @@ jobs:
           override: true
 
       - name: Install NodeJS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.1.0
 
       - name: Verify versions
         run: rustc --version && rustup --version && cargo --version && node --version && npm --version
