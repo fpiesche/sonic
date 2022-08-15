@@ -40,7 +40,7 @@ whatlang = "0.12"
 regex = "1.4"
 
 [target.'cfg(unix)'.dependencies]
-nix = "0.18"
+nix = "0.25"
 tikv-jemallocator = { version = "0.4", optional = true }
 
 [target.'cfg(windows)'.dependencies]
