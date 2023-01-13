@@ -6,7 +6,7 @@
 # To build a Docker image for each specified platform and push it to a registry:
 # docker buildx build . --platforms linux/amd64,linux/arm64/v8 -t myorg/myrepo:latest
 
-FROM rust:1.58.1-slim-bullseye AS build
+FROM rust:1.66.1-slim-bullseye AS build
 
 RUN apt-get update
 RUN apt-get install -y build-essential clang
