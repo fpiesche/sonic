@@ -23,7 +23,7 @@ jobs:
 
   build-docker:
     needs: get-tag
-    name: Build Docker image for ${{ needs.get-tag.outputs.previous-tag }}
+    name: Build Docker image ${{ needs.get-tag.outputs.previous-tag }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -44,6 +44,7 @@ jobs:
           images: florianpiesche/sonic
           tags: |
             type=semver
+            ${{ needs.get-tag.outputs.previous-tag }}
 
       - name: Login to Docker Hub
         uses: docker/login-action@v3
