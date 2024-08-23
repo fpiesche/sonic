@@ -43,7 +43,6 @@ jobs:
         with:
           images: florianpiesche/sonic
           tags: |
-            type=semver
             ${{ needs.get-tag.outputs.previous-tag }}
 
       - name: Login to Docker Hub
